@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { Font } from 'astro:assets';
 ---
 
 <!doctype html>
@@ -10,6 +11,10 @@ import '../styles/global.css';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
+    <Font cssVariable='--font-windows' preload />
+    <Font cssVariable='--font-cmd' preload/>
+    <Font cssVariable='--font-ibm' preload />
+    <Font cssVariable='--font-lucida' preload />
 	</head>
 	<body>
 		<slot />
