@@ -1,1 +1,9 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme inline {
+	--font-windows: var(--font-windows);
+	--font-cmd: var(--font-cmd);
+	--font-ibm: var(--font-ibm);
+	--font-lucida: var(--font-lucida);
+}
+
