@@ -1,0 +1,123 @@
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-self: left;
+  width: 90vw;
+  height: 100%;
+  margin-left: 5px;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+.clock {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 90%;
+  border: 2px inset var(--menu_border_inner);
+  margin: 3px 5px;
+  cursor: pointer;
+}
+
+.time {
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "pixelated";
+}
+
+.start_button {
+  display: flex;
+  align-items: center;
+  width: 35%;
+  height: 90%;
+  border: 2px outset var(--menu_border_inner);
+  text-align: center;
+  font-family: "pixelated";
+  font-size: 1.2rem;
+}
+
+.start_button:hover {
+  border: 2px inset var(--menu_border_hover);
+}
+
+.start_button.active {
+  background: repeating-conic-gradient(var(--grey50) 0% 25%, transparent 0% 50%)
+    50% / 3px 3px;
+  border: 2px inset var(--menu_border_hover);
+}
+
+.start_button img {
+  aspect-ratio: 28/32;
+  height: 80%;
+  width: auto;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.app_drawer {
+  display: flex;
+  flex-direction: row;
+  height: 90%;
+  width: 100%;
+  margin: auto 0.25rem;
+}
+
+.app {
+  display: none;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  max-width: 100%;
+  padding-left: 0.5vw;
+  padding-right: 1vw;
+  border: 2px outset var(--menu_border_inner);
+  background-color: var(--menu_bg);
+  margin-left: 3px;
+}
+
+.app:hover {
+  border: 2px inset var(--menu_border_inner);
+}
+
+.app.active {
+  display: flex;
+  overflow: hidden;
+}
+
+.app.app_focus {
+  background: repeating-conic-gradient(var(--grey50) 0% 25%, transparent 0% 50%)
+    50% / 3px 3px;
+  border: 2px inset var(--menu_border_inner);
+}
+
+.app img {
+  height: 80%;
+  width: auto;
+  margin-right: 1vw;
+}
+
+.app_title {
+  font-family: "pixelated";
+  font-size: 1.15rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media screen and (min-width: 800px) {
+  .start_button {
+    width: 10%;
+  }
+  .clock {
+    width: 10%;
+    background-color: var(--menu_bg);
+  }
+
+  .app {
+    width: clamp(5%, 25%, 25%);
+  }
+}

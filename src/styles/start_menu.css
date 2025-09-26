@@ -1,0 +1,207 @@
+menu {
+  display: flex;
+  flex-direction: row;
+  height: 50vh;
+  width: 100vw;
+  bottom: 5vh;
+}
+
+.start_menu {
+  display: none;
+  flex-direction: row;
+  position: fixed;
+  height: 50vh;
+  width: 100%;
+  bottom: 5vh;
+  background-color: var(--start_bg);
+  border: 3px outset var(--window_border);
+  z-index: 10;
+}
+
+.start_menu.active {
+  display: flex;
+}
+
+.start_menu .start_side {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 20%;
+  height: 100%;
+  background-color: var(--start_side_bg);
+}
+
+.start_side_1 {
+  font-family: "cmd";
+  font-size: 4rem;
+  color: white;
+  transform: rotate(-90deg);
+  padding-top: 10px;
+  padding-left: 15px;
+}
+
+.start_menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.arrow {
+  display: none;
+  font-family: "cmd";
+}
+
+.start_item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "pixelated";
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.start_item img {
+  width: 15%;
+  height: auto;
+}
+
+.toggle {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  font-family: "pixelated";
+  font-size: 1.5rem;
+}
+
+.toggle_on.active,
+.toggle_off.active {
+  font-family: "cmd";
+  font-size: 2rem;
+}
+
+.crt_settings {
+  display: none;
+}
+
+.audio_settings {
+  display: none;
+}
+
+.audio_toggle_on.active,
+.audio_toggle_off.active {
+  font-family: "cmd";
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 800px) {
+  .start_menu {
+    height: 500px;
+    width: 400px;
+    margin-left: 5px;
+  }
+
+  .start_item {
+    font-size: 1.5rem;
+    justify-content: space-between;
+  }
+
+  .start_item img {
+    width: 15%;
+  }
+
+  .start_item.active {
+    background-color: var(--start_hover);
+    color: white;
+  }
+
+  .start_menu li {
+    cursor: pointer;
+  }
+
+  .start_menu li:hover {
+    color: white;
+    background-color: var(--start_hover);
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .arrow {
+    display: unset;
+  }
+
+  .crt_settings.active {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 405px;
+    bottom: calc(5vh + 420px);
+    width: 200px;
+    height: 100px;
+    background-color: var(--start_bg);
+    border: 3px outset var(--window_border);
+    z-index: 20;
+  }
+
+  .toggle_on,
+  .toggle_off {
+    font-family: "pixelated";
+    font-size: 1.5rem;
+    height: 50%;
+    text-align: center;
+    padding-top: 10px;
+    cursor: pointer;
+  }
+
+  .toggle_on:hover,
+  .toggle_off:hover {
+    background-color: var(--start_hover);
+    color: white;
+  }
+
+  .toggle_on.active,
+  .toggle_off.active {
+    font-family: "cmd";
+    font-size: 2rem;
+  }
+
+  .audio_settings.active {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 405px;
+    bottom: calc(5vh + 340px);
+    width: 200px;
+    height: 100px;
+    background-color: var(--start_bg);
+    border: 3px outset var(--window_border);
+    z-index: 20;
+  }
+
+  .audio_toggle_on,
+  .audio_toggle_off {
+    font-family: "pixelated";
+    font-size: 1.5rem;
+    height: 50%;
+    text-align: center;
+    padding-top: 10px;
+    cursor: pointer;
+  }
+
+  .audio_toggle_on:hover,
+  .audio_toggle_off:hover {
+    background-color: var(--start_hover);
+    color: white;
+  }
+
+  .audio_toggle_on.active,
+  .audio_toggle_off.active {
+    font-family: "cmd";
+    font-size: 2rem;
+  }
+}
