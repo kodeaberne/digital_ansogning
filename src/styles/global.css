@@ -7,3 +7,11 @@
 	--font-lucida: var(--font-lucida);
 }
 
+@theme inline {
+	--color-wallpaper: #008282;
+	--color-windows-lightgrey: #e6e6e6;
+	--color-windows-grey: #c3c3c3;
+	--color-windows-white: #ffffff;
+	--color-windows-blue: #000082;
+	--color-windows-darkgrey: #898989;
+}
