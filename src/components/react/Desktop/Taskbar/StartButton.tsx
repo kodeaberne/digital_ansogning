@@ -6,7 +6,7 @@ function StartButton() {
 			onMouseEnter={(e) => (e.target.style.borderStyle = 'inset')}
 			onMouseLeave={(e) => (e.target.style.borderStyle = 'outset')}
 		>
-			<img src="./src/assets/icons/start.png" alt="Start" className="w-10 h-10" />
+			<img src="./icons/start.png" alt="Start" className="w-10 h-10" />
 			Start
 		</button>
 	);
