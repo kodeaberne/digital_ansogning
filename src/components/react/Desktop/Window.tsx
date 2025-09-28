@@ -12,7 +12,9 @@ export default function Window({
 	posX,
 	posY,
 	focused,
+	active,
 	onClick,
+	onClose,
 }: {
 	title: string;
 	icon: string;
@@ -22,10 +24,11 @@ export default function Window({
 	posX: number;
 	posY: number;
 	focused: boolean;
+	active: boolean;
 	onClick?: () => void;
+	onClose?: () => void;
 }) {
 	const [minimized, setMinimized] = useState(false);
-	const [active, setActive] = useState(true);
 
 	return (
 		<div
@@ -58,7 +61,7 @@ export default function Window({
 						<div className="line h-[3px] w-[40%] bg-black mt-[80%]"></div>
 					</button>
 					<button
-						onClick={() => setActive(false)}
+						onClick={onClose}
 						className="close h-[20px] w-[20px] bg-windows-grey border-1 border-windows-lightgrey hover:border-black cursor-pointer flex flex-col items-center justify-center"
 						style={{ borderStyle: 'outset' }}
 						onMouseEnter={(e) => (e.target.style.borderStyle = 'inset')}

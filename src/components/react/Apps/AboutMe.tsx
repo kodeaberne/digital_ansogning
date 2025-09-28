@@ -1,13 +1,17 @@
 import Window from '../Desktop/Window';
 
 function AboutMe({
+	activeIndex,
 	focusIndex,
 	index,
 	onClick,
+	onClose,
 }: {
+	activeIndex: number[];
 	focusIndex: number;
 	index: number;
 	onClick: () => void;
+	onClose: () => void;
 }) {
 	return (
 		<Window
@@ -19,7 +23,9 @@ function AboutMe({
 			posX={65}
 			posY={10}
 			focused={focusIndex === index}
+			active={activeIndex.includes(index)}
 			onClick={onClick}
+			onClose={onClose}
 		/>
 	);
 }
