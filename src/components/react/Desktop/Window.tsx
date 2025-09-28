@@ -84,7 +84,7 @@ export default function Window({
 					</button>
 				</div>
 			</div>
-			<div className="content w-full h-full p-2 flex flex-col items-center">
+			<div className="content w-full h-full p-1 flex flex-col items-center">
 				{content === 'welcome' ? (
 					<WelcomeContent />
 				) : content === 'skills' ? (
