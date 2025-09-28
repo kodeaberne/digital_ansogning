@@ -7,6 +7,11 @@ import { useState } from 'react';
 function Desktop() {
 	const [focusIndex, setFocusIndex] = useState(0);
 	const [activeIndex, setActiveIndex] = useState([0, 1, 2]);
+	const taskbarObjects = [
+		{ title: 'AboutMe.exe', icon: './icons/about.png', index: 1 },
+		{ title: 'MS-DOS Prompt', icon: './icons/dos.png', index: 0 },
+		{ title: 'C:\\My Skills', icon: './icons/folder.png', index: 2 },
+	];
 
 	const handleDesktopClick = () => {
 		setFocusIndex(-1);
@@ -81,7 +86,12 @@ function Desktop() {
 				onClick={() => handleWindowClick(2)}
 				onClose={() => handleCloseWindow(2)}
 			/>
-			<Taskbar />
+			<Taskbar
+				taskbarObjects={taskbarObjects}
+				activeIndex={activeIndex}
+				focusIndex={focusIndex}
+				onClick={handleWindowClick}
+			/>
 		</main>
 	);
 }
