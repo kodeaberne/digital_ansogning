@@ -7,6 +7,14 @@ import { useState } from 'react';
 function Desktop() {
 	const [focusIndex, setFocusIndex] = useState(0);
 	const [activeIndex, setActiveIndex] = useState([0, 1, 2]);
+	
+	// Add state for window positions
+	const [windowPositions, setWindowPositions] = useState({
+		0: { x: 5, y: 5 },    // Welcome window
+		1: { x: 65, y: 10 },  // AboutMe window
+		2: { x: 7.5, y: 50 }, // Skills window
+	});
+	
 	const taskbarObjects = [
 		{ title: 'AboutMe.exe', icon: './icons/about.png', index: 1 },
 		{ title: 'MS-DOS Prompt', icon: './icons/dos.png', index: 0 },
@@ -33,6 +41,14 @@ function Desktop() {
 
 	const handleCloseWindow = (index: number) => {
 		setActiveIndex((prev) => prev.filter((id) => id !== index));
+	};
+
+	// Add handler for position changes
+	const handlePositionChange = (index: number, x: number, y: number) => {
+		setWindowPositions(prev => ({
+			...prev,
+			[index]: { x, y }
+		}));
 	};
 
 	return (
@@ -71,6 +87,9 @@ function Desktop() {
 				index={0}
 				onClick={() => handleWindowClick(0)}
 				onClose={() => handleCloseWindow(0)}
+				onPositionChange={(x, y) => handlePositionChange(0, x, y)}
+				posX={windowPositions[0].x}
+				posY={windowPositions[0].y}
 			/>
 			<AboutMe
 				activeIndex={activeIndex}
@@ -78,6 +97,9 @@ function Desktop() {
 				index={1}
 				onClick={() => handleWindowClick(1)}
 				onClose={() => handleCloseWindow(1)}
+				onPositionChange={(x, y) => handlePositionChange(1, x, y)}
+				posX={windowPositions[1].x}
+				posY={windowPositions[1].y}
 			/>
 			<Skills
 				activeIndex={activeIndex}
@@ -85,6 +107,9 @@ function Desktop() {
 				index={2}
 				onClick={() => handleWindowClick(2)}
 				onClose={() => handleCloseWindow(2)}
+				onPositionChange={(x, y) => handlePositionChange(2, x, y)}
+				posX={windowPositions[2].x}
+				posY={windowPositions[2].y}
 			/>
 			<Taskbar
 				taskbarObjects={taskbarObjects}

@@ -6,12 +6,18 @@ function AboutMe({
 	index,
 	onClick,
 	onClose,
+	onPositionChange,
+	posX,
+	posY,
 }: {
 	activeIndex: number[];
 	focusIndex: number;
 	index: number;
 	onClick: () => void;
 	onClose: () => void;
+	onPositionChange: (x: number, y: number) => void;
+	posX: number;
+	posY: number;
 }) {
 	return (
 		<Window
@@ -20,12 +26,13 @@ function AboutMe({
 			content="about"
 			sizeX={400}
 			sizeY={650}
-			posX={65}
-			posY={10}
+			posX={posX}
+			posY={posY}
 			focused={focusIndex === index}
 			active={activeIndex.includes(index)}
 			onClick={onClick}
 			onClose={onClose}
+			onPositionChange={onPositionChange}
 		/>
 	);
 }
