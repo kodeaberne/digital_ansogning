@@ -5,12 +5,12 @@ import Skills from '../Apps/Skills';
 import { useState } from 'react';
 
 function Desktop() {
-	const [focusIndex, setFocusIndex] = useState(1);
-	
+	const [focusIndex, setFocusIndex] = useState(0);
+
 	const handleWindowClick = (index: number) => {
 		setFocusIndex(index);
 	};
-	
+
 	return (
 		<main className="w-full h-full bg-wallpaper">
 			<Welcome focusIndex={focusIndex} index={0} onClick={() => handleWindowClick(0)} />
