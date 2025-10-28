@@ -12,7 +12,7 @@ function Taskbar({
 	taskbarObjects: { title: string; icon: string; index: number }[];
 	onClick: (index: number) => void;
 }) {
-	console.log(taskbarObjects);
+	// console.log(taskbarObjects);
 	return (
 		<div className="w-full h-[50px] bg-windows-grey bottom-0 fixed z-100 flex flex-row space-between items-center border-t-3 border-ridge border-windows-white pl-1.5 pr-1.5">
 			<div id="start-button-container" className="w-25 h-[90%] items-center">
