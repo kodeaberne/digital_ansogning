@@ -4,7 +4,8 @@ export default function Welcome({
 	activeIndex,
 	focusIndex,
 	index,
-	onClick,
+	onMouseDown,
+	// onClick,
 	onClose,
 	onPositionChange,
 	posX,
@@ -13,7 +14,8 @@ export default function Welcome({
 	activeIndex: number[];
 	focusIndex: number;
 	index: number;
-	onClick: () => void;
+	onMouseDown: () => void;
+	// onClick: () => void;
 	onClose: () => void;
 	onPositionChange: (x: number, y: number) => void;
 	posX: number;
@@ -30,7 +32,8 @@ export default function Welcome({
 			posY={posY}
 			focused={focusIndex === index}
 			active={activeIndex.includes(index)}
-			onClick={onClick}
+			// onClick={onClick}
+			onMouseDown={onMouseDown}
 			onClose={onClose}
 			onPositionChange={onPositionChange}
 		/>

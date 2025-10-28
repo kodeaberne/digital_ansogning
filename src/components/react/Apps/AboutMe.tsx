@@ -4,7 +4,8 @@ function AboutMe({
 	activeIndex,
 	focusIndex,
 	index,
-	onClick,
+	// onClick,
+	onMouseDown,
 	onClose,
 	onPositionChange,
 	posX,
@@ -13,7 +14,8 @@ function AboutMe({
 	activeIndex: number[];
 	focusIndex: number;
 	index: number;
-	onClick: () => void;
+	onMouseDown: () => void;
+	// onClick: () => void;
 	onClose: () => void;
 	onPositionChange: (x: number, y: number) => void;
 	posX: number;
@@ -30,7 +32,8 @@ function AboutMe({
 			posY={posY}
 			focused={focusIndex === index}
 			active={activeIndex.includes(index)}
-			onClick={onClick}
+			onMouseDown={onMouseDown}
+			// onClick={onClick}
 			onClose={onClose}
 			onPositionChange={onPositionChange}
 		/>

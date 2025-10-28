@@ -85,7 +85,7 @@ function Desktop() {
 				activeIndex={activeIndex}
 				focusIndex={focusIndex}
 				index={0}
-				onClick={() => handleWindowClick(0)}
+				onMouseDown={() => handleWindowClick(0)}
 				onClose={() => handleCloseWindow(0)}
 				onPositionChange={(x, y) => handlePositionChange(0, x, y)}
 				posX={windowPositions[0].x}
@@ -95,7 +95,7 @@ function Desktop() {
 				activeIndex={activeIndex}
 				focusIndex={focusIndex}
 				index={1}
-				onClick={() => handleWindowClick(1)}
+				onMouseDown={() => handleWindowClick(1)}
 				onClose={() => handleCloseWindow(1)}
 				onPositionChange={(x, y) => handlePositionChange(1, x, y)}
 				posX={windowPositions[1].x}
@@ -105,7 +105,7 @@ function Desktop() {
 				activeIndex={activeIndex}
 				focusIndex={focusIndex}
 				index={2}
-				onClick={() => handleWindowClick(2)}
+				onMouseDown={() => handleWindowClick(2)}
 				onClose={() => handleCloseWindow(2)}
 				onPositionChange={(x, y) => handlePositionChange(2, x, y)}
 				posX={windowPositions[2].x}

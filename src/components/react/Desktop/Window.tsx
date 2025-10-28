@@ -37,6 +37,7 @@ export default function Window({
 	focused,
 	active,
 	onClick,
+	onMouseDown,
 	onClose,
 	onPositionChange, // Add this new prop
 }: {
@@ -50,6 +51,7 @@ export default function Window({
 	focused: boolean;
 	active: boolean;
 	onClick?: () => void;
+	onMouseDown?: () => void;
 	onClose?: () => void;
 	onPositionChange?: (x: number, y: number) => void; // Add this type
 }) {
@@ -133,6 +135,7 @@ export default function Window({
 				height: sizeY,
 			}}
 			onClick={onClick}
+			onMouseDown={onMouseDown}
 		>
 			<div
 				onMouseDown={handleMouseDown}
