@@ -7,14 +7,14 @@ import { useState } from 'react';
 function Desktop() {
 	const [focusIndex, setFocusIndex] = useState(0);
 	const [activeIndex, setActiveIndex] = useState([0, 1, 2]);
-	
+
 	// Add state for window positions
 	const [windowPositions, setWindowPositions] = useState({
-		0: { x: 5, y: 5 },    // Welcome window
-		1: { x: 65, y: 10 },  // AboutMe window
+		0: { x: 5, y: 5 }, // Welcome window
+		1: { x: 65, y: 10 }, // AboutMe window
 		2: { x: 7.5, y: 50 }, // Skills window
 	});
-	
+
 	const taskbarObjects = [
 		{ title: 'AboutMe.exe', icon: './icons/about.png', index: 1 },
 		{ title: 'MS-DOS Prompt', icon: './icons/dos.png', index: 0 },
@@ -45,9 +45,9 @@ function Desktop() {
 
 	// Add handler for position changes
 	const handlePositionChange = (index: number, x: number, y: number) => {
-		setWindowPositions(prev => ({
+		setWindowPositions((prev) => ({
 			...prev,
-			[index]: { x, y }
+			[index]: { x, y },
 		}));
 	};
 
