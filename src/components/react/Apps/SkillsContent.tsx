@@ -30,14 +30,13 @@ export default function SkillsContent() {
 				<img src="./icons/astro.png" alt="Astro" className="w-15 h-15" />
 				<p className="text-windows-black font-windows">Astro</p>
 			</div>
-
+			<div className="flex flex-col items-center">
+				<img src="./icons/next.png" alt="Flask" className="w-15 h-15" />
+				<p className="text-windows-black font-windows">Next.js</p>
+			</div>
 			<div className="flex flex-col items-center">
 				<img src="./icons/python.png" alt="Python" className="w-15 h-15" />
 				<p className="text-windows-black font-windows">Python</p>
-			</div>
-			<div className="flex flex-col items-center">
-				<img src="./icons/flask.png" alt="Flask" className="w-15 h-15" />
-				<p className="text-windows-black font-windows">Flask</p>
 			</div>
 			<div className="flex flex-col items-center">
 				<img src="./icons/bash.png" alt="Bash" className="w-15 h-15" />
