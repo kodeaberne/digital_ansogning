@@ -27,7 +27,7 @@ function AboutMe({
 			icon="./icons/about.png"
 			content="about"
 			sizeX={400}
-			sizeY={650}
+			sizeY={740}
 			posX={posX}
 			posY={posY}
 			focused={focusIndex === index}

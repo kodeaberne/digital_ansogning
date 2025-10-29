@@ -2,6 +2,14 @@ export default function AboutMeContent() {
 	return (
 		<div className="about-me-content flex flex-col gap-4">
 			<h1 className="text-4xl font-cmd text-center">Hello, World!</h1>
+			<img
+				src="./images/me.webp"
+				alt="An image of me"
+				className="h-[25%] w-auto mx-auto object-contain border-2"
+				style={{
+					borderStyle: 'inset',
+				}}
+			/>
 			<p className="font-windows">
 				Hi, I’m Mikkel—front‑end tinkerer, bug whisperer and habitual over-commenter. I
 				study Multimedia Design at KEA, live in Copenhagen, and have an unhealthy respect

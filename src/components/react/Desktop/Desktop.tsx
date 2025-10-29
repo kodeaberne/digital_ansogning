@@ -11,7 +11,7 @@ function Desktop() {
 	// Add state for window positions
 	const [windowPositions, setWindowPositions] = useState({
 		0: { x: 5, y: 5 }, // Welcome window
-		1: { x: 65, y: 10 }, // AboutMe window
+		1: { x: 65, y: 7 }, // AboutMe window
 		2: { x: 7.5, y: 50 }, // Skills window
 	});
 
