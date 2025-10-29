@@ -22,7 +22,7 @@ export default function AboutMeContent() {
 				them later.
 			</p>
 			<section
-				className="flex flex-col justify-center gap-8 bg-windows-white border-2 p-2.5"
+				className="flex flex-col justify-center gap-4 bottom-0 bg-windows-white border-2 p-2.5"
 				style={{
 					borderStyle: 'inset',
 				}}
