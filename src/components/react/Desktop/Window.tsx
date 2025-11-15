@@ -147,7 +147,7 @@ export default function Window({
 				</div>
 				<div className="window-buttons-container flex flex-row items-center gap-[5px] w-[50px] place-self-right">
 					<button
-						onClick={() => setMinimized(!minimized)}
+						onMouseDown={() => setMinimized(!minimized)}
 						className="minimize h-[20px] w-[20px] bg-windows-grey border-1 border-windows-lightgrey hover:border-black cursor-pointer flex flex-col items-center justify-space-around"
 						style={{ borderStyle: 'outset' }}
 						onMouseEnter={(e) =>

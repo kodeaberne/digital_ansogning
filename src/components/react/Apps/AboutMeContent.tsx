@@ -5,7 +5,7 @@ export default function AboutMeContent() {
 			<img
 				src="./images/me.webp"
 				alt="An image of me"
-				className="h-[25%] w-auto mx-auto object-contain border-2"
+				className="h-45 w-45 mx-auto object-cover border-2 rounded-full"
 				style={{
 					borderStyle: 'inset',
 				}}
