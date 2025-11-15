@@ -27,7 +27,7 @@ export default function AboutMeContent() {
 					borderStyle: 'inset',
 				}}
 			>
-				<h2 className="text-2xl font-cmd text-center">Contact Me</h2>
+				<h2 className="text-2xl font-cmd text-center">Get in touch!</h2>
 				<div className="contact-wrapper flex flex-row justify-around">
 					<a
 						href="https://github.com/ExManubis"
